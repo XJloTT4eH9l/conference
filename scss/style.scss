@@ -1,0 +1,1095 @@
+/* Zero */
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+ul li {list-style: none;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none; color: inherit;}
+a:hover{text-decoration: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+body{
+	font-family: 'Inter', sans-serif;
+}
+span{
+	color: #6d6d6d;
+}
+
+/*  Variebles  */
+$text: #18216D;
+$bg: #F3F5FF;
+$btn-main-bg: #005FEC;
+
+/*  Containers  */
+.container-large{
+	width: 100%;
+	max-width: 1430px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.container{
+	width: 100%;
+	max-width: 1215px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+/*  Burger  */
+.burger{
+	display: none;
+	padding: 15px 2px;
+	background: none;
+	z-index: 3;
+	&__item{
+		display: block;
+		font-size: 0;
+		width: 28px;
+		height: 3px;
+		background-color: #273551;
+		position: relative;
+		bottom: 3px;
+	}
+	&__item::after{
+		content: '';
+		width: 20px;
+		height: 3px;
+		background-color: #273551;
+		position: absolute;
+		top: 8px;
+		right: 0;
+	}
+}
+/*  Btn-main  */
+.btn-main{
+	padding: 16px 28px;
+	background-color: $btn-main-bg;
+	color: #fff;
+	border-radius: 6px;
+	font-size: 17px;
+	line-height: 1.2;
+}
+
+/*  Header  */
+.header{
+	padding: 35px 0;
+	background-color:  $bg;
+	&__inner{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+/*  Nav  */
+.nav{
+	color: $text;
+	&__list{
+		display: flex;
+		list-style: none;
+	}
+	&__link{
+		padding-bottom: 5px;
+		color: $text;
+		font-size: 18px;
+		line-height: 1.1;
+		font-weight: 500;
+		transition: border-bottom 0.1s;
+	}
+	&__link:hover{
+		border-bottom: 3px solid $text;
+	}
+	&__item{
+		margin-right: 50px;
+	}
+	&__item:last-child{
+		margin-right: 0;
+	}
+	&__buttons{
+		color: $text;
+	}
+	&__btn{
+		margin-left: 50px;
+		padding: 16px 27px;
+		background-color: $text;
+		color: #fff;
+		border-radius: 6px;
+		font-size: 17px;
+		font-weight: 500;
+		transition: background 0.2s linear;
+
+	}
+	&__btn:hover{
+		background-color: #00ECD0;
+	}
+}
+
+/*  Intro  */
+.intro{
+	background-color: #F3F5FF;
+	padding-top: 50px;
+	padding-bottom: 80px;
+	&__inner{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__text{
+		color: $text;
+		max-width: 520px;
+	}
+	&__title{
+		font-size: 48px;
+		font-weight: 600;
+		line-height: 1.25;
+		margin-bottom: 16px;
+	}
+	&__subtitle{
+		font-size: 17px;
+		line-height: 1.6;
+		margin-bottom: 34px;
+		max-width: 484px;
+	}
+	&__button{
+		padding: 23px 37px;
+		background-color: #00ECD0;
+		border-radius: 6px;
+		font-size: 17px;
+		font-weight: 500;
+	}
+}
+/*  Companys  */
+.companys{
+	&__inner{
+		padding: 40px 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__text{
+		color: $text;
+		max-width: 505px;
+	}
+	&__title{
+		font-size: 36px;
+		font-weight: 600;
+		line-height: 1.4;
+	}
+	&__statistics{
+		display: flex;
+		color: $text;
+		margin-right: 60px;
+	}
+	&__downloads{
+		margin-right: 90px;
+	}
+	&__download{
+		font-size: 60px;
+		font-weight: 700;
+		line-height: 1.15;
+		margin-bottom: 10px;
+	}
+	&__hearts{
+		margin-left: 5px;
+		margin-bottom: 10px;
+	}
+	&__text{
+		font-size: 16px;
+		line-height: 1.6;
+	}
+	&__stars{
+		margin-bottom: 10px;
+	}
+	&__partners{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+/*  Features  */
+.features{
+	margin: 130px 0;
+	color: $text;
+	&__head{
+		text-align: center;
+	}
+	&__heading{
+		font-size: 48px;
+		font-weight: 600;
+		line-height: 1.3;
+		margin-bottom: 12px;
+	}
+	&__about{
+		max-width: 542px;
+		font-size: 16px;
+		line-height: 1.9;
+		margin: 0 auto;
+		margin-bottom: 48px;
+	}
+	&__inner{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__item{
+		width: 33.33333%;
+	}
+	&__title{
+		margin-top: 30px;
+		margin-bottom: 14px;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 1.2;
+	}
+	&__text{
+		max-width: 320px;
+		font-size: 16px;
+		line-height: 1.6;
+		margin-bottom: 30px;
+	}
+	&__link{
+		font-size: 20px;
+		font-weight: 500;
+		transition: border-bottom 0.1s;
+	}
+	&__link:hover{
+		border-bottom: 3px solid $text;
+	}
+}
+/*  Integrate  */
+.integrate{
+	padding: 78px 0;
+	background-color: $bg;
+	color: $text;
+	&__inner{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+	&__text{
+		max-width: 487px;
+		font-size: 16px;
+		line-height: 1.6;
+		margin-bottom: 40px;
+	}
+	&__title{
+		font-size: 36px;
+		font-weight: 600;
+		line-height: 1.3;
+		margin-bottom: 15px;
+	}
+}
+/*  Comunicate  */
+.comunication{
+	margin-top: 130px;
+	margin-bottom: 150px;
+	&__inner{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__about{
+		color: $text;
+	}
+	&__image{
+		position: relative;
+	}
+	&__weekly{
+		position: absolute;
+		bottom: -90px;
+		right: -90px;
+	}
+	&__dots{
+		position: absolute;
+		left: -75px;
+		bottom: -38px;
+		z-index: -1;
+	}
+	&__title{
+		max-width: 520px;
+		font-size: 36px;
+		font-weight: 600;
+		line-height: 1.32;
+		margin-bottom: 16px;
+	}
+	&__text{
+		max-width: 446px;
+		font-size: 16px;
+		line-height: 1.6;
+		margin-bottom: 30px;
+	}
+	&__item{
+		margin-bottom: 24px;
+		display: flex;
+		align-items: center;
+	}
+	&__item:last-child{
+		margin-bottom: 50px;
+	}
+	&__benefit{
+		margin-left: 16px;
+		font-size: 18px;
+		font-weight: 500;
+	}
+}
+/*  Pricing  */
+.pricing{
+	margin-bottom: 130px;
+	color: $text;
+	&__head{
+		text-align: center;
+		max-width: 542px;
+		margin: 0 auto;
+	}
+	&__heading{
+		font-size: 48px;
+		font-weight: 600;
+		line-height: 1.3;
+		margin-bottom: 12px;	
+	}
+	&__about{
+		font-size: 16px;
+		line-height: 1.9;
+		margin-bottom: 48px;
+	}
+	&__buttons{
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: 272px;
+		padding: 6px;
+		background-color: #E6EFFE;
+		border-radius: 6px;
+	}
+	&__switch-active{
+		padding: 16px 32px;
+		font-size: 17px;
+		font-weight: 500;
+		color: #005FEC;
+		background-color: #fff;
+		border-radius: 6px;
+		transition: 0.5s;
+	}
+	&__switch{
+		padding: 16px 32px;
+		font-size: 17px;
+		font-weight: 500;
+		color: $text;
+		background-color: inherit;
+		border-radius: 6px;
+		transition: 0.5s;
+	}
+	&__inner{
+		margin-top: 80px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__plan{
+		border: 1px solid #D4D5D5;
+		border-radius: 6px;
+		width: 355px;
+		padding-bottom: 60px;
+	}
+	&__top{
+		padding-top: 22px;
+		padding-bottom: 41px;
+		border-bottom: 1px solid #D4D5D5;
+	}
+	&__title{
+		padding-left: 41px;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 2;
+	}
+	&__price{
+		padding-left: 41px;
+		font-size: 36px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 1.35;
+	}
+	&__conditions{
+		list-style: none;
+		padding-top: 22px;
+		padding-left: 41px;
+		margin-bottom: 40px;
+	}
+	&__condition{
+		display: flex;
+		align-items: center;
+		margin-top: 16px;
+		font-size: 17px;
+
+	}
+	&__condition--blocked{
+		opacity: 0.5;
+	}
+	&__mark{
+		margin-right: 12px;
+	}
+	&__btn{
+		margin-left: 41px;
+		padding: 16px 36px;
+		font-size: 16px;
+		color: $text;
+		background-color: #e6effe;
+		border-radius: 6px;
+		transition: background 0.2s linear;
+	}
+	&__btn:hover{
+		background-color: #005FEC;
+		color: #fff;
+	}
+}
+/*  Testimonials  */
+.testimonials{
+	color: $text;
+	background-color: $bg;
+	padding: 100px 0;
+	&__inner{
+		display: flex;
+		justify-content: center;
+	}
+	&__text{
+		max-width: 616px;
+	}
+	&__title{
+		text-align: center;
+		font-size: 48px;
+		font-weight: 600;
+		margin-bottom: 55px;
+	}
+	&__reviews{
+		font-style: italic;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 1.82;
+		margin-bottom: 33px;
+	}
+	&__person{
+		font-size: 26px;
+		font-weight: 500;
+		margin-bottom: 6px;
+	}
+	&__position{
+		font-size: 16px;
+		opacity: 0.6;
+	}
+}
+/*  Footer  */
+.footer{
+	color: $text;
+	margin-top: 120px;
+	margin-bottom: 60px;
+	&__inner{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__familiar{
+		max-width: 248px;
+	}
+	&__item{
+		max-width: 117px;
+	}
+	&__item:last-child{
+		max-width: 300px;
+	}
+	&__text{
+		font-size: 16px;
+		line-height: 1.65;
+		margin: 20px 0;
+	}
+	&__title{
+		font-size: 22px;
+		font-weight: 600;
+		line-height: 1.2;
+		margin-bottom: 31px;
+	}
+	&__link{
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 2.5;
+		transition: border-bottom 0.1s;
+	}
+	&__link:hover{
+		border-bottom: 3px solid $text;
+	}
+}
+/*  Copyright  */
+.copyright{
+	padding: 30px 0;
+	border-top: 1px solid #D4D5D5;
+	text-align: center;
+	color: $text;
+	&__text{
+		font-size: 16px;
+	}
+}
+
+/*  Media  */
+@media (max-width: 1221px){
+	/*  Integrate  */
+	.integrate{
+		&__text{
+			text-align: center;
+		}
+	}
+}
+@media (max-width: 1171px){
+	/*  Intro  */
+	.intro{
+		padding-top: 30px;
+		&__text{
+			width: 100%;
+			text-align: center;
+			margin: 0 auto;
+		}
+		&__subtitle{
+			max-width: 100%;
+		}
+		&__image{
+			margin: 20px auto;
+			
+		}
+	}
+	/*  Pricing */
+	.pricing{
+		&__plan{
+			width: 300px;
+		}
+	}
+	/*  Comunication  */
+	.comunication{
+		text-align: center;
+		&__image{
+			display: none;
+		}
+		&__text{
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+		&__inner{
+			justify-content: center;
+		}
+		&__item{
+			justify-content: center;
+		}
+		&__item:last-child{
+			margin-bottom: 30px;
+		}
+	}
+}
+@media (max-width: 1024px){
+	/*  header  */
+	.header{
+		padding: 20px 0;
+	}
+	/*  nav  */
+	.nav{
+		display: none;
+		&__buttons{
+			display: none;
+		}
+	}
+	/*  Burger  */
+	.burger{
+		display: block;
+	}
+	/*  companys  */
+	.companys{
+		&__text{
+			max-width: 100%;
+			margin-bottom: 15px;
+			text-align: center;
+		}
+		&__statistics{
+			margin: 0 auto;
+		}
+		&__fedex{
+			display: none;
+		}
+	}
+	/*  features  */
+	.features{
+		margin: 80px 0;
+		&__heading{
+			font-size: 40px;
+		}
+		&__item{
+			width: 100%;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		&__title{
+			font-size: 22px;
+		}
+		&__text{
+			margin: 0 auto;
+			margin-bottom: 14px;
+			font-size: 14px;
+		}
+		&__link{
+			font-size: 18px;
+		}
+	}
+	/*  Comunication  */
+	.comunication{
+		margin: 80px 0;
+	}
+	/*  Pricing */
+	.pricing{
+		&__inner{
+			flex-direction: column;
+			margin-top: 50px;
+		}	
+		&__plan{
+			margin: 0 auto;
+			margin-bottom: 30px;
+			width: 400px;
+		}
+	}
+	/*  Footer */
+	.footer{
+		margin-top: 80px;
+		&__familiar{
+			max-width: inherit;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		&__text{
+			max-width: 300px;
+			margin: 20px auto;
+		}
+	}
+}
+@media (max-width: 768px){
+	/*  Intro  */
+	.intro{
+		padding-bottom: 30px;
+		&__title{
+			font-size: 40px;
+		}
+		&__button{
+			padding: 20px 30px;
+		}
+		&__img{
+			width: 507px;
+			height: auto;
+		}
+	}
+	/*  companys  */
+	.companys{
+		&__title{
+			font-size: 34px;
+		}
+		&__download{
+			font-size: 50px;
+		}
+		&__walmart{
+			display: none;
+		}
+		&__img{
+			width: 100px;
+			height: auto;
+		}
+	}
+	/*  Integrate  */
+	.integrate{
+		padding: 50px 0;
+		&__title{
+			font-size: 32px;
+		}
+		&__img{
+			width: 500px;
+			height: auto;
+		}
+	}
+	/*  Comunication  */
+	.comunication{
+		&__title{
+			font-size: 32px;
+		}
+	}
+	/*  Pricing */
+	.pricing{
+		&__heading{
+			font-size: 40px;
+		}
+		&__about{
+			margin-bottom: 30px;
+		}
+	}
+	/*  Testimonials */
+	.testimonials{
+		padding: 50px 0;
+		&__title{
+			font-size: 40px;
+		}
+		&__reviews{
+			font-size: 22px;
+		}
+		&__person{
+			font-size: 24px;
+		}
+	}
+	/*  Footer */
+	.footer{
+		margin-top: 50px;
+		margin-bottom: 30px;
+		&__item{
+			text-align: center;
+			max-width: inherit;
+			width: 50%;
+			margin-bottom: 15px;
+		}
+		&__title{
+			margin-bottom: 10px;
+		}
+		&__item:last-child{
+			max-width: inherit;
+		}
+	}
+}
+@media (max-width: 580px){
+	/*  Intro  */
+	.intro{
+		&__title{
+			font-size: 36px;
+		}
+		&__button{
+			padding: 18px 25px;
+		}
+		&__img{
+			width: 407px;
+			height: auto;
+		}
+	}
+	/*  companys  */
+	.companys{
+		&__inner{
+			padding: 20px 0;
+		}
+		&__title{
+			font-size: 30px;
+		}
+		&__download{
+			font-size: 45px;
+		}
+		&__img{
+			width: 80px;
+			height: auto;
+		}
+	}
+
+	/*  features  */
+	.features{
+		margin: 50px 0;
+		&__heading{
+			font-size: 36px;
+		}
+		&__item{
+			margin-bottom: 30px;
+		}
+		&__about{
+			max-width: 400px;
+		}
+		&__img{
+			width: 48px;
+			height: auto;
+		}
+	}
+	/*  Integrate  */
+	.integrate{
+		padding: 30px 0;
+		&__title{
+			font-size: 30px;
+		}
+		&__img{
+			width: 350px;
+			height: auto;
+		}
+	}
+	/*  Comunication  */
+	.comunication{
+		&__title{
+			font-size: 30px;
+		}
+	}
+	/*  Pricing */
+	.pricing{
+		margin-bottom: 50px;
+		&__heading{
+			font-size: 36px;
+		}
+		&__about{
+			margin-bottom: 30px;
+		}
+	}
+	/*  Testimonials */
+	.testimonials{
+		padding: 50px 0;
+		&__title{
+			font-size: 36px;
+			margin-bottom: 30px;
+		}
+		&__reviews{
+			font-size: 20px;
+		}
+		&__person{
+			font-size: 22px;
+		}
+	}
+	/*  Footer */
+	.footer{
+		&__title{
+			font-size: 20px;
+		}
+		&__link{
+			font-size: 16px;
+			line-height: 1.8;
+		}
+		&__text--contact{
+			margin: 0 auto;
+		}
+	}
+}
+
+@media (max-width: 480px){
+	/*  Intro  */
+	.intro{
+		&__title{
+			font-size: 30px;
+		}
+		&__subtitle{
+			font-size: 14px;
+			margin-bottom: 16px;
+		}
+		&__button{
+			font-size: 14px;
+			padding: 16px 23px;
+		}
+		&__img{
+			width: 307px;
+			height: auto;
+		}
+	}
+	/*  companys  */
+	.companys{
+		&__title{
+			font-size: 24px;
+		}
+		&__text{
+			font-size: 14px;
+		}
+		&__downloads{
+			margin-right: 50px;
+			text-align: center;
+		}
+		&__rating{
+			text-align: center;
+		}
+		&__download{
+			font-size: 35px;
+		}
+		&__img{
+			width: 60px;
+			height: auto;
+		}
+		&__heart{
+			width: 12px;
+			height: auto;
+		}
+		&__star{
+			width: 12px;
+			height: auto;
+		}
+	}
+
+	/*  features  */
+	.features{
+		&__heading{
+			font-size: 30px;
+		}
+		&__about{
+			font-size: 14px;
+			max-width: 335px;
+		}
+	}
+	/*  Integrate  */
+	.integrate{
+		&__title{
+			font-size: 28px;
+		}
+		&__text{
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+		&__img{
+			display: none;
+		}
+	}
+	.btn-main{
+		font-size: 15px;
+		padding: 14px 24px;
+	}
+	.comunication{
+		margin: 30px 0;
+		&__title{
+			font-size: 28px;
+		}
+		&__text{
+			font-size: 14px;
+		}
+		&__benefit{
+			font-size: 16px;
+		}
+	}
+	/*  Pricing  */
+	.pricing{
+		margin-top: 50px;
+		&__heading{
+			font-size: 30px;
+		}
+		&__about{
+			font-size: 14px;
+		}
+		&__plan{
+			width: 300px;
+		}
+		&__condition{
+			font-size: 15px;
+		}
+		&__buttons{
+			max-width: 252px;
+		}
+		&__switch{
+			padding: 14px 26px;
+			font-size: 15px;
+		}
+		&__btn{
+			padding: 14px 26px;
+			font-size: 14px;
+		}
+	}
+	/*  Testimonials */
+	.testimonials{
+		padding: 30px 0;
+		&__title{
+			font-size: 30px;
+			margin-bottom: 20px;
+		}
+		&__reviews{
+			font-size: 18px;
+		}
+		&__person{
+			font-size: 20px;
+		}
+	}
+	/*  Footer */
+	.footer{
+		&__title{
+			font-size: 18px;
+		}
+		&__item{
+			width: 100%;
+		}
+	}
+}
+@media (max-width: 360px){
+	/*  Intro  */
+	.intro{
+		&__title{
+			font-size: 28px;
+		}
+		&__button{
+			padding: 12px 17px;
+		}
+		&__img{
+			width: 307px;
+			height: auto;
+		}
+	}
+	/*  companys  */
+	.companys{
+		&__title{
+			font-size: 20px;
+		}
+		&__downloads{
+			margin-right: 30px;
+		}
+		&__download{
+			font-size: 25px;
+		}
+		&__heart{
+			width: 9px;
+			height: auto;
+		}
+		&__star{
+			width: 9px;
+			height: auto;
+		}
+	}
+	/*  features  */
+	.features{
+		&__heading{
+			font-size: 26px;
+		}
+	}
+	/*  Integrate  */
+	.integrate{
+		&__title{
+			font-size: 26px;
+		}
+	}
+	/*  Pricing  */
+	.pricing{
+		&__plan{
+			width: 280px;
+		}
+	}
+	/*  Testimonials */
+	.testimonials{
+		padding: 30px 0;
+		&__title{
+			font-size: 28px;
+			margin-bottom: 20px;
+		}
+		&__reviews{
+			font-size: 16px;
+		}
+		&__person{
+			font-size: 28px;
+		}
+	}
+}
