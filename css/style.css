@@ -58,6 +58,8 @@ input::-ms-clear {
 
 button {
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 button::-moz-focus-inner {
@@ -69,6 +71,8 @@ a,
 a:visited {
   text-decoration: none;
   color: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 a:hover {
@@ -118,6 +122,8 @@ span {
 /*  Burger  */
 
 .burger {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   display: none;
   padding: 15px 2px;
   background: none;
@@ -163,6 +169,8 @@ span {
   margin-bottom: 10px;
   padding: 10px;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .mobile-menu li {
