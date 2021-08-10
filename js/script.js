@@ -29,10 +29,21 @@ for(anchor of anchors){
         anchor.addEventListener('click', function(event){
             event.preventDefault();
             anchorId = this.getAttribute('href');
-            console.log(anchorId);
             document.querySelector(anchorId).scrollIntoView({
                 behavior : 'smooth', block : 'start'
             })
         })
     }
+}
+
+//mobile-scrolling-menu
+let mobileMenu = document.getElementById("sliding-mobile-menu");
+let burgerBtn = document.getElementById("burger");
+let closeBtn = document.getElementById("close");
+
+burgerBtn.onclick = function(){
+    mobileMenu.style.right = "0";
+}
+closeBtn.onclick = function(){
+    mobileMenu.style.right = "-200px";
 }
