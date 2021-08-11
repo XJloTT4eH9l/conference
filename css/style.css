@@ -178,6 +178,12 @@ span {
   margin-bottom: 20px;
 }
 
+.anchors__scroll {
+  position: absolute;
+  top: -120px;
+  left: 0;
+}
+
 /*  Btn-main  */
 
 .btn-main {
@@ -393,6 +399,7 @@ span {
 /*  Features  */
 
 .features {
+  position: relative;
   margin: 130px 0;
   color: #18216D;
 }
@@ -461,6 +468,7 @@ span {
 /*  Integrate  */
 
 .integrate {
+  position: relative;
   padding: 78px 0;
   background-color: #F3F5FF;
   color: #18216D;
@@ -573,6 +581,7 @@ span {
 /*  Pricing  */
 
 .pricing {
+  position: relative;
   margin-bottom: 130px;
   color: #18216D;
 }
@@ -765,6 +774,7 @@ span {
 /*  Footer  */
 
 .footer {
+  position: relative;
   color: #18216D;
   margin-top: 120px;
   margin-bottom: 60px;

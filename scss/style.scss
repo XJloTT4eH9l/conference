@@ -27,9 +27,9 @@ html,body{
 input,button,textarea{font-family:inherit;}
 ul li {list-style: none;}
 input::-ms-clear{display: none;}
-button{cursor: pointer;}
+button{cursor: pointer; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent;}
 button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none; color: inherit;}
+a, a:visited{text-decoration: none; color: inherit; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent;}
 a:hover{text-decoration: none;}
 img{vertical-align: top;}
 
@@ -62,10 +62,10 @@ $btn-main-bg: #005FEC;
 }
 /*  Burger  */
 .burger{
+	-webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent;
 	display: none;
 	padding: 15px 2px;
 	background: none;
-	z-index: 3;
 	&__item{
 		display: block;
 		font-size: 0;
@@ -85,6 +85,33 @@ $btn-main-bg: #005FEC;
 		right: 0;
 	}
 }
+/*  Mobile-menu  */
+.mobile-menu{
+	background-color: #00ecd0;
+	border-radius: 20px 0 0 20px;
+	position: fixed;
+	top: 0;
+	right: -200px;
+	text-align: center;
+	width: 200px;
+	padding: 30px 0;
+	transition: right 0.5s linear;
+	&__close{
+		margin-bottom: 10px;
+		padding: 10px;
+		cursor: pointer;
+		-webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent;
+	}
+}
+.mobile-menu li{
+	color: $text;
+	margin-bottom: 20px;
+}
+.anchors__scroll{
+	position: absolute;
+	top: -120px;
+	left: 0;
+}
 /*  Btn-main  */
 .btn-main{
 	padding: 16px 28px;
@@ -97,7 +124,12 @@ $btn-main-bg: #005FEC;
 
 /*  Header  */
 .header{
-	padding: 35px 0;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 25px 0;
+	z-index: 5;
 	background-color:  $bg;
 	&__inner{
 		display: flex;
@@ -151,7 +183,7 @@ $btn-main-bg: #005FEC;
 /*  Intro  */
 .intro{
 	background-color: #F3F5FF;
-	padding-top: 50px;
+	padding-top: 150px;
 	padding-bottom: 80px;
 	&__inner{
 		display: flex;
@@ -234,6 +266,7 @@ $btn-main-bg: #005FEC;
 }
 /*  Features  */
 .features{
+	position: relative;
 	margin: 130px 0;
 	color: $text;
 	&__head{
@@ -284,6 +317,7 @@ $btn-main-bg: #005FEC;
 }
 /*  Integrate  */
 .integrate{
+	position: relative;
 	padding: 78px 0;
 	background-color: $bg;
 	color: $text;
@@ -362,6 +396,7 @@ $btn-main-bg: #005FEC;
 }
 /*  Pricing  */
 .pricing{
+	position: relative;
 	margin-bottom: 130px;
 	color: $text;
 	&__head{
@@ -506,6 +541,7 @@ $btn-main-bg: #005FEC;
 }
 /*  Footer  */
 .footer{
+	position: relative;
 	color: $text;
 	margin-top: 120px;
 	margin-bottom: 60px;
@@ -568,7 +604,7 @@ $btn-main-bg: #005FEC;
 @media (max-width: 1171px){
 	/*  Intro  */
 	.intro{
-		padding-top: 30px;
+		padding-top: 100px;
 		&__text{
 			width: 100%;
 			text-align: center;

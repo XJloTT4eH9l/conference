@@ -41,6 +41,7 @@ let mobileMenu = document.getElementById("sliding-mobile-menu");
 let burgerBtn = document.getElementById("burger");
 let closeBtn = document.getElementById("close");
 
+
 burgerBtn.onclick = function(){
     mobileMenu.style.right = "0";
 }
