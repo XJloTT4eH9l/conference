@@ -192,7 +192,12 @@ span {
 /*  Header  */
 
 .header {
-  padding: 35px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 25px 0;
+  z-index: 5;
   background-color: #F3F5FF;
 }
 
@@ -269,7 +274,7 @@ span {
 
 .intro {
   background-color: #F3F5FF;
-  padding-top: 50px;
+  padding-top: 150px;
   padding-bottom: 80px;
 }
 
@@ -844,7 +849,7 @@ span {
   /*  Intro  */
 
   .intro {
-    padding-top: 30px;
+    padding-top: 100px;
   }
 
   .intro__text {
