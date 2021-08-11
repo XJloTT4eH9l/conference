@@ -32,6 +32,7 @@ for(anchor of anchors){
             document.querySelector(anchorId).scrollIntoView({
                 behavior : 'smooth', block : 'start'
             })
+            mobileMenu.style.right = "-200px";
         })
     }
 }
